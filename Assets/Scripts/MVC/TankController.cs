@@ -1,7 +1,16 @@
 using UnityEngine;
 
-public class TankController : MonoBehaviour
+public class TankController 
 {
+    public TankController(TankModel tankModel, TankView tankPrefab)
+    {
+        TankModel = tankModel;
+        TankPrefab = GameObject.Instantiate<TankView>(tankPrefab);
+    }
+
+    public TankModel TankModel { get; }
+    public TankView TankPrefab { get; }
+
     [SerializeField]float speed = 100f;
     [SerializeField] float turnSpeed = 90f;
     float horizontalInput = 0;
@@ -12,9 +21,10 @@ public class TankController : MonoBehaviour
 
     private Rigidbody rigidBody;
 
+
     private void Start()
     {
-        rigidBody = GetComponent<Rigidbody>();
+       /* rigidBody = GetComponent<Rigidbody>();*/
     }
 
     private void FixedUpdate()
@@ -27,14 +37,16 @@ public class TankController : MonoBehaviour
 
     private void Move()
     {
-        Vector3 movement = horizontalInput * transform.forward * speed * Time.deltaTime;
-        rigidBody.MovePosition(rigidBody.position + movement);
+        /*        Vector3 movement = horizontalInput * transform.forward * speed * Time.deltaTime;
+                rigidBody.MovePosition(rigidBody.position + movement);*/
+        /*transform.Translate(Vector3.forward * Time.deltaTime * speed * verticalInput);*/
     }
 
     private void Turn()
     {
-        float turn = verticalInput * turnSpeed * Time.deltaTime;
-        Quaternion turnRotation = Quaternion.Euler(0f, turn, 0f);
-        rigidBody.MoveRotation(rigidBody.rotation * turnRotation);
+        /*        float turn = verticalInput * turnSpeed * Time.deltaTime;
+                Quaternion turnRotation = Quaternion.Euler(0f, turn, 0f);
+                rigidBody.MoveRotation(rigidBody.rotation * turnRotation);*/
+        /*transform.Rotate(0f,turnSpeed * horizontalInput * Time.deltaTime, 0f) ;*/
     }
 }
