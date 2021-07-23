@@ -41,6 +41,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 44b8dd77ffe8e1f43861f393bda537a5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  horizontalInput: 0
+  joystick: {fileID: 0}
 --- !u!1001 &3154957742858637487
 PrefabInstance:
   m_ObjectHideFlags: 0
