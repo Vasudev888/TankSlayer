@@ -41,7 +41,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 44b8dd77ffe8e1f43861f393bda537a5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  horizontalInput: 0
+  tankTurrent: {fileID: 3154957742858606519}
   joystick: {fileID: 0}
 --- !u!1001 &3154957742858637487
 PrefabInstance:
@@ -127,6 +127,12 @@ PrefabInstance:
 --- !u!1 &3154957742858606527 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 100112, guid: 002e2a607f5b64c48be0b3b0d8b8bfdd,
+    type: 3}
+  m_PrefabInstance: {fileID: 3154957742858637487}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &3154957742858606519 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 100120, guid: 002e2a607f5b64c48be0b3b0d8b8bfdd,
     type: 3}
   m_PrefabInstance: {fileID: 3154957742858637487}
   m_PrefabAsset: {fileID: 0}
