@@ -6,17 +6,12 @@ public class TankView : MonoBehaviour
 {
     public GameObject tankTurrent;
     public Transform fireTransform;
-    
-/*    public Color tankColor;*/
 
     float horizontalInput;
     float verticalInput;
 
-
-
     public Joystick joystick;
 
-    public Rigidbody shellRb;
     public TankController tankController;
 
     private void Start()

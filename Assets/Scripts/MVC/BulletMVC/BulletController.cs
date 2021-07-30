@@ -5,11 +5,14 @@ public class BulletController
     public BulletController(BulletModel bulletModel, BulletView bulletPrefab)
     {
         BulletModel = bulletModel;
-        BulletPrefab = bulletPrefab;
+        var position = bulletView.fireTransform.position;
+        bulletView = GameObject.Instantiate<BulletView>(bulletPrefab, position, Quaternion.identity);
+
+        bulletView.bulletController = this;
     }
 
     public BulletModel BulletModel { get; }
-    public BulletView BulletPrefab { get; }
+    public BulletView bulletView { get; }
 
     public void Fire()
     {

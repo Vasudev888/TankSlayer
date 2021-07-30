@@ -17,10 +17,6 @@ public class TankService : MonoSingletonGeneric<TankService>
         i++;
     }
 
-    public void Fire()
-    {
-        
-    }
 
     private void Update()
     {
